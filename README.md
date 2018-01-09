@@ -3,7 +3,7 @@
 Simple Screenrecordingdetector in Swift. Enjoy it.
 
 
-##Usage
+## Usage
 It's really simple to use.
 
 ```swift
