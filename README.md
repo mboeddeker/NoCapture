@@ -1,15 +1,35 @@
 # NoCapture
 
-[![CI Status](http://img.shields.io/travis/mboeddeker/NoCapture.svg?style=flat)](https://travis-ci.org/mboeddeker/NoCapture)
-[![Version](https://img.shields.io/cocoapods/v/NoCapture.svg?style=flat)](http://cocoapods.org/pods/NoCapture)
-[![License](https://img.shields.io/cocoapods/l/NoCapture.svg?style=flat)](http://cocoapods.org/pods/NoCapture)
-[![Platform](https://img.shields.io/cocoapods/p/NoCapture.svg?style=flat)](http://cocoapods.org/pods/NoCapture)
+Simple Screenrecordingdetector in Swift. Enjoy it.
 
-## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+##Usage
+It's really simple to use.
 
-## Requirements
+```swift
+import NoCapture
+
+class ViewController: UIViewController, NoCaptureDelegate {
+
+let captureDetector = NoCapture.instance
+
+override func viewDidLoad() {
+super.viewDidLoad()
+captureDetector.delegate = self
+captureDetector.startDetection()
+}
+
+// DELGATE METHOD
+func screenCaptureStatusChanged(isRecording: Bool) {
+if isRecording {
+self.view.backgroundColor = UIColor.red
+} else {
+self.view.backgroundColor = UIColor.white
+}
+}
+
+}
+```
 
 ## Installation
 
@@ -22,8 +42,9 @@ pod 'NoCapture'
 
 ## Author
 
-mboeddeker, marvin.boeddeker@gmail.com
+Marvin Knabe, info@appgewaltig.de
 
 ## License
 
 NoCapture is available under the MIT license. See the LICENSE file for more info.
+

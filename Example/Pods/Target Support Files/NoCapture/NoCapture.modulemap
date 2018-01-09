@@ -1,0 +1,6 @@
+framework module NoCapture {
+  umbrella header "NoCapture-umbrella.h"
+
+  export *
+  module * { export * }
+}

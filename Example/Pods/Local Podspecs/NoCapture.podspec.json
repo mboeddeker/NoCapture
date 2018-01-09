@@ -1,0 +1,22 @@
+{
+  "name": "NoCapture",
+  "version": "0.1.0",
+  "summary": "A short description of NoCapture.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mboeddeker/NoCapture",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mboeddeker": "marvin.boeddeker@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/mboeddeker/NoCapture.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NoCapture/Classes/**/*"
+}

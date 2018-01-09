@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import NoCapture
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NoCaptureDelegate {
+
+    let captureDetector = NoCapture.instance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        captureDetector.delegate = self
+        captureDetector.startDetection()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func screenCaptureStatusChanged(isRecording: Bool) {
+        if isRecording {
+            self.view.backgroundColor = UIColor.red
+        } else {
+            self.view.backgroundColor = UIColor.white
+        }
     }
 
 }
